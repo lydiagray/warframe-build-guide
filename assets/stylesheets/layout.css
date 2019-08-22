@@ -150,6 +150,12 @@ h2 {
     text-align: center;
 }
 
+@media screen and (max-width: 759px) {
+    .page-header {
+        background-image: none;
+    }       
+}
+
 .page-header-small {
     background-image: url("../../assets/images/warframe-main-image.jpg");
     background-position: top center;
@@ -167,6 +173,14 @@ h2 {
     color: #f7f7f7;
     text-shadow: 2px  2px  20px  rgba(0, 0, 0, 0.9);   
     font-weight: 600;
+    padding-bottom: 700px;
+}
+
+@media screen and (max-width: 759px) {
+    .header-content {
+        padding-bottom: 0px;
+        color: #000000;
+    }       
 }
 
 /* Adds a darker filter to the image to help with colour contrast */
