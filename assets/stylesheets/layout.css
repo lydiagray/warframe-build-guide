@@ -138,6 +138,16 @@ h2 {
     text-align: center;
 }
 
+.page-header-small {
+    background-image: url("../../assets/images/warframe-main-image.jpg");
+    background-position: top center;
+    background-size: cover;
+    height: 200px;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
 .header-content {
     max-width: 600px;
     min-width: 90%;
@@ -222,7 +232,7 @@ h2 {
 }
 
 /* For desktop displays 3 images in a line */
-@media screen and (min-width: 700px) {    
+/* @media screen and (min-width: 700px) {    
     .image-gallery .content {
       display: flex;
       text-align: left;
@@ -233,7 +243,7 @@ h2 {
       max-width: 1000px;
     }
     .an-image {
-      flex: 33%; /* assumes three images */
+      flex: 33%; 
       padding-top: 20px;
       padding-right: 20px;
       padding-bottom: 20px;
@@ -241,7 +251,7 @@ h2 {
       background: #D8D8D8;
       max-width: 333px;
     }    
-  }
+  } */
 
 /* --------------------------------------------------------------------------------------------------------------- */
 /* **Contact me section** */
