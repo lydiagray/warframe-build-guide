@@ -1,0 +1,297 @@
+/* **Global page CSS** */
+
+/*Padding and borders are not added to width*/
+* {
+    box-sizing: border-box;
+}
+/*Reset margins and padding for h1,h2,& p tags*/
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/*Responsive images*/
+img {
+    max-width: 100%;
+    max-height: 80vh; 
+    height: auto;
+}
+
+body {
+    margin-top: 0;
+    font-family: 'Lora', serif;
+    font-size: 19px;
+    line-height: 1.65;
+    background: linear-gradient(#EDEDED, #757575);
+}
+
+h1, h2 {
+    font-family: 'Noto Serif', serif;
+}
+
+h2 {
+    font-weight: 600;
+    letter-spacing: 0.25em;
+}
+
+.container-content, .page-nav, .header-content {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.content {
+    margin: 10px 0;
+}
+
+/* Add subtle colour transitions to each section background to create a gentle colour change flow */
+.about-me {
+    background: linear-gradient(#757575, #898989);
+}
+.work-experience {
+    background: linear-gradient(#919191, #B7B7B7);
+}
+.image-gallery {
+    background: linear-gradient(#C1C1C1, #CCCCCC);
+}
+.contact-me {
+    background: linear-gradient(#D8D8D8, #E2E2E2);
+}
+.page-footer {
+    background-color: #EDEDED;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* **Navigation section** */
+
+.page-nav {
+    padding: 10px 0px;
+    max-width: none;
+}
+
+/* Sets return to nav menu buttons to a smaller max width */
+.page-top {
+    max-width: 250px;
+}
+
+.page-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #4C5372;
+    border-right: 1px solid #4C5372;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page-nav li {
+    flex: 1 1 50%;
+    display: flex;
+    border-bottom: 1px solid #4C5372;
+    border-left: 1px solid #4C5372;
+}
+
+.page-nav a {
+    padding: 15px 10px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    text-align: center;
+    color: #707070;
+    background-color: #f7f7f7;
+    box-shadow: inset 0 0 10px #707070;
+}
+
+.page-top a {
+    padding: 0;
+}
+
+.page-nav a:hover {
+    background: #707070;
+    color: #f7f7f7;
+    box-shadow: inset 0 0 10px #f7f7f7;
+}
+/* For desktop display nav links in a single line */
+@media screen and (min-width: 760px){ 
+    .page-nav ul {  
+        flex-wrap: nowrap; 
+    }
+    .page-nav li {
+        flex: 1 1 25%;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* **Header section** */
+
+.page-header {
+    background-image: url("../../assets/images/warframe-main-image.jpg");
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 600px;
+    min-width: 90%;
+    font-size: 1.35rem;
+    color: #f7f7f7;
+    text-shadow: 2px  2px  20px  rgba(0, 0, 0, 0.9);   
+    font-weight: 600;
+}
+
+/* Adds a darker filter to the image to help with colour contrast */
+.header-darkener {
+    background: rgba(0, 0, 0, 0.5);
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+
+/* Hides multi line header subtext on mobile */
+@media screen and (max-width: 759px) {
+    .hide-on-mobile {
+        position: absolute; 
+        overflow: hidden; 
+        clip: rect(0, 0, 0, 0); 
+        height: 1px; width: 1px; 
+        margin: -1px; padding: 0; border: 0; 
+    }
+    .header-sub-text {
+        margin-top: 30px;
+    }
+}
+
+/* Hides single line header subtext on desktop */
+@media screen and (min-width: 760px) {
+    .hide-on-desktop {
+        position: absolute; 
+        overflow: hidden; 
+        clip: rect(0 0 0 0); 
+        height: 1px; width: 1px; 
+        margin: -1px; padding: 0; border: 0;
+    }
+}
+
+/*For header sub text mobile display only*/
+.hide-on-desktop span {
+    display: block;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* **About me section** */
+
+/* Adds greyscale filter to image on load - doesn't work on IE*/
+.img-circle {
+    border-radius: 50%;
+    float: right;
+    border: 1px solid black;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+/* Removes greyscale filter on hover/touch - on touch-screen this remains set after user selects photo */
+.img-circle:hover  {
+    -webkit-filter: grayscale(0%);
+    transition: 1s ease-out;
+    filter: grayscale(0%);
+    box-shadow: 0 0 15px 5px #121212;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* Image gallery section */
+
+.an-image {
+    padding: 10px;
+    text-align: center;
+    background: #D8D8D8;
+}
+
+/* Sets a different background colour to every 2nd image */
+.an-image:nth-child(2n) {
+    background: #919191;
+}
+
+/* For desktop displays 3 images in a line */
+@media screen and (min-width: 700px) {    
+    .image-gallery .content {
+      display: flex;
+      text-align: left;
+      justify-content: center;
+      background: none;
+    }
+    .image-gallery .container-content {
+      max-width: 1000px;
+    }
+    .an-image {
+      flex: 33%; /* assumes three images */
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      background: #D8D8D8;
+      max-width: 333px;
+    }    
+  }
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* **Contact me section** */
+
+.content .row {
+    width: 100%;
+}
+
+.content label {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 560px) {
+    .content label {
+        display: inline-block;
+        vertical-align: top;
+        width: 35%;
+    }
+}
+
+.content input, .content textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-family: 'Noto Serif', serif;
+    font-size: 0.7em;
+}
+
+@media screen and (min-width: 560px) {
+    .content input, .content textarea {
+        width: 60%;
+    }
+}
+
+.content textarea {
+    margin-top: 5px;
+}
+
+.content p input {
+    font-weight: 600;
+}
+
+.container-content h2, .container-content p {
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+/* **Footer section** */
+
+footer {
+    font-size: 0.8em;
+}
