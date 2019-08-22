@@ -29,6 +29,11 @@ h1, h2 {
     font-family: 'Noto Serif', serif;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 h2 {
     font-weight: 600;
     letter-spacing: 0.25em;
